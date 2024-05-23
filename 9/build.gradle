@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Use JUnit Jupiter for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+
+    // This dependency is used by the application.
+    implementation 'com.google.guava:guava:31.1-jre'
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'prak9'
+}
+
+task createJar(type: Jar) {
+    from sourceSets.main.output
+    archiveFileName = 'prak9.jar'
+    manifest {
+        attributes 'Main-Class': 'prak9'
+    }
+}
+
+task moveJar(type: Copy) {
+    dependsOn createJar
+    from 'build/libs'
+    into 'docker'
+}
+
+task buildDocker(type: Exec) {
+    dependsOn moveJar
+    commandLine 'docker', 'build', '-t', 'myapp:latest', '.'
+    workingDir 'docker'
+}
+
+task runDocker(type: Exec) {
+    dependsOn buildDocker
+    commandLine 'docker', 'run', '-d', '-p', '8080:8080', 'myapp:latest'
+}
