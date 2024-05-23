@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.prak12.Prak12ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-27T18:28:54" hostname="DESKTOP-03LIR0Q" time="0.914">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.example.prak12.Prak12ApplicationTests" time="0.914"/>
+  <system-out><![CDATA[21:28:51.425 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.prak12.Prak12ApplicationTests]: Prak12ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:28:51.545 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.prak12.Prak12Application for test class com.example.prak12.Prak12ApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2024-03-27T21:28:52.010+03:00  INFO 23020 --- [prak12] [    Test worker] c.example.prak12.Prak12ApplicationTests  : Starting Prak12ApplicationTests using Java 21.0.2 with PID 23020 (started by Ivan in C:\MIREA\JAVA\JAVA4sem\prak12)
+2024-03-27T21:28:52.012+03:00  INFO 23020 --- [prak12] [    Test worker] c.example.prak12.Prak12ApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2024-03-27T21:28:53.928+03:00  INFO 23020 --- [prak12] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-03-27T21:28:53.997+03:00  INFO 23020 --- [prak12] [    Test worker] c.example.prak12.Prak12ApplicationTests  : Started Prak12ApplicationTests in 2.269 seconds (process running for 3.631)
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\Ivan\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.12\be4984cb6fd1ef1d11f218a648889dfda44b8a15\byte-buddy-agent-1.14.12.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
